@@ -3,6 +3,7 @@
 ## Temas Aplicados del Curso
 * NodeJS
 * Paquetes NPM
+* Manejo de archivos en JavaScript
 * Servidores Web
 * Express
 * Router
