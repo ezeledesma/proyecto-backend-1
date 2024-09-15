@@ -1,7 +1,7 @@
 import { Router } from "express";
 const router = Router();
 import { ProductManager } from "../managers/product-manager.js"
-const manager = new ProductManager();
+const manager = new ProductManager("./src/data/products.json");
 
 router.get("/api/products", (req, res) => {
 	let {limit} = req.query;

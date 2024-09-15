@@ -1,0 +1,57 @@
+[
+	{
+		"id":"1",
+		"title":"Agua",
+		"description":"Agua mineral",
+		"code":"ag01",
+		"price":100,
+		"status":true,
+		"stock":50,
+		"category":"Bebidas",
+		"thumbnails":[]
+	},
+	{
+		"id":"2",
+		"title":"Coca Cola",
+		"description":"Refresco Coca Cola",
+		"code":"ko01",
+		"price":200,
+		"status":true,
+		"stock":10,
+		"category":"Bebidas",
+		"thumbnails":[]
+	},
+	{
+		"id":"3",
+		"title":"Vino",
+		"description":"Vino Bodega Lopez",
+		"code":"vlpz01",
+		"price":150,
+		"status":true,
+		"stock":500,
+		"category":"Bebidas con alcohol",
+		"thumbnails":[]
+	},
+	{
+		"id":"4",
+		"title":"Pizza",
+		"description":"Pizza grande (8 porciones)",
+		"code":"pz01",
+		"price":180,
+		"status":false,
+		"stock":5,
+		"category":"Comidas",
+		"thumbnails":[]
+	},
+	{
+		"id":"5",
+		"title":"Arroz",
+		"description":"Arroz que no se pasa",
+		"code":"az01",
+		"price":30,
+		"status":true,
+		"stock":20,
+		"category":"Comidas",
+		"thumbnails":[]
+	}
+]

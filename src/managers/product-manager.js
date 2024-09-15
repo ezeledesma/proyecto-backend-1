@@ -1,7 +1,21 @@
+import * as fs from "fs";
+
 export class ProductManager {
 	static ultimoId = 0;
-	constructor() {
-		this.products = [];
+	constructor(archivo) {
+		if(archivo) {
+			let cargarArchivo = async () => {
+				const resultado = await fs.promises.readFile(archivo, "utf-8");
+				this.products = JSON.parse(resultado);
+				
+				// Actualizo ultimoId
+				this.products.map(item => {
+					ProductManager.ultimoId = Math.max(ProductManager.ultimoId, parseInt(item.id));
+				})
+			}
+			cargarArchivo();
+		}
+		else this.products = [];
 	}
 
 	addProduct({title, description, code, price, status=true, stock, category, thumbnails}) {
