@@ -61,5 +61,4 @@ export class CartManager {
 		}
 		return 0;
 	}
-
 }

@@ -6,8 +6,6 @@
 * Servidores Web
 * Express
 * Router
-* Multer
-* Motores de Plantillas
-  
+
 > [!NOTE]
 > Sitio aun en desarrollo (primera entrega)
