@@ -91,14 +91,17 @@ Body
 ]
 ```
 #### GET: ```/api/carts```. Obtener listado de carritos
+Ejemplo
 ```
 http://localhost:8080/api/carts
 ```
 #### GET: ```/api/carts/:cid```. Obtener listado de productos de un carrito
+Ejemplo
 ```
 http://localhost:8080/api/carts/2
 ```
 #### POST: ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
+Ejemplo
 ```
 http://localhost:8080/api/carts/2/product/1
 ```
