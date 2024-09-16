@@ -27,20 +27,24 @@ http://localhost:8080/api/products?limit=3
 ```
 </details>
 
-#### GET: ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
-Ejemplo
-```
-http://localhost:8080/api/products
-http://localhost:8080/api/products?limit=3
-```
+<details>
+<summary>
 
 #### GET: ```/api/products/:pid```. Obtener producto por id 
+</summary>
+
 Ejemplo
 ```
 http://localhost:8080/api/products/3
 ```
+</details>
+
+<details>
+<summary>
 
 #### POST: ```/api/products```. Cargar un producto
+</summary>
+
 Ejemplo
 ```
 http://localhost:8080/api/products
@@ -58,7 +62,14 @@ Body
 	"thumbnails": []
 }
 ```
+</details>
+
+<details>
+<summary>
+
 #### PUT: ```/api/products/:pid```. Actualizar un producto
+</summary>
+
 Ejemplo
 ```
 http://localhost:8080/api/products/1
@@ -76,17 +87,53 @@ Body
 	"thumbnails": ["imagen-fideos-1.png","imagen-fideos-2.png"]
 }
 ```
+</details>
+
+<details>
+<summary>
+
 #### DELETE: ```/api/products/:pid```. Eliminar un producto
+</summary>
+
 Ejemplo
 ```
 http://localhost:8080/api/products/2
 ```
+</details>
 
 ### Carritos
 
-#### POST: ```/api/carts```. Agregar carrito
-Ejemplo
+<details>
+<summary>
 
+#### GET: ```/api/carts```. Obtener listado de carritos
+</summary>
+
+Ejemplo
+```
+http://localhost:8080/api/carts
+```
+</details>
+
+<details>
+<summary>
+
+#### GET: ```/api/carts/:cid```. Obtener listado de productos de un carrito
+</summary>
+
+Ejemplo
+```
+http://localhost:8080/api/carts/2
+```
+</details>
+
+<details>
+<summary>
+
+#### POST: ```/api/carts```. Agregar carrito
+</summary>
+
+Ejemplo
 ```
 http://localhost:8080/api/carts
 ```
@@ -103,29 +150,18 @@ Body
 	}
 ]
 ```
-#### GET: ```/api/carts```. Obtener listado de carritos
-Ejemplo
-```
-http://localhost:8080/api/carts
-```
-#### GET: ```/api/carts/:cid```. Obtener listado de productos de un carrito
-Ejemplo
-```
-http://localhost:8080/api/carts/2
-```
-#### POST: ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
-Ejemplo
-```
-http://localhost:8080/api/carts/2/product/1
-```
+</details>
 
 <details>
 <summary>
 
-## How do I dropdown?
+#### POST: ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
 </summary>
 
-## This is how you dropdown.
+Ejemplo
+```
+http://localhost:8080/api/carts/2/product/1
+```
 </details>
 
 > [!NOTE]
