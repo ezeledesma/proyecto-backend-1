@@ -14,6 +14,19 @@
 
 ### Productos
 
+<details>
+<summary>
+
+#### GET ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
+</summary>
+
+Ejemplo
+```
+http://localhost:8080/api/products
+http://localhost:8080/api/products?limit=3
+```
+</details>
+
 #### GET: ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
 Ejemplo
 ```
@@ -105,6 +118,15 @@ Ejemplo
 ```
 http://localhost:8080/api/carts/2/product/1
 ```
+
+<details>
+<summary>
+
+## How do I dropdown?
+</summary>
+
+## This is how you dropdown.
+</details>
 
 > [!NOTE]
 > Sitio aun en desarrollo (primera entrega)
