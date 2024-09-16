@@ -10,17 +10,40 @@
 
 ------
 
-## Rutas
+## Documentacion API
+
+<style>
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+</style>
 
 ### Productos
 
 <details>
 <summary>
 
-#### GET ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
+##### GET ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/products
 http://localhost:8080/api/products?limit=3
@@ -30,10 +53,10 @@ http://localhost:8080/api/products?limit=3
 <details>
 <summary>
 
-#### GET: ```/api/products/:pid```. Obtener producto por id 
+##### GET ```/api/products/:pid```. Obtener producto por id 
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/products/3
 ```
@@ -42,14 +65,14 @@ http://localhost:8080/api/products/3
 <details>
 <summary>
 
-#### POST: ```/api/products```. Cargar un producto
+##### POST ```/api/products```. Cargar un producto
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/products
 ```
-Body
+**Body**
 ```javascript
 {
 	"title": "Yerba",
@@ -67,14 +90,14 @@ Body
 <details>
 <summary>
 
-#### PUT: ```/api/products/:pid```. Actualizar un producto
+##### PUT ```/api/products/:pid```. Actualizar un producto
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/products/1
 ```
-Body
+**Body**
 ```javascript
 {
 	"title": "Fideos",
@@ -92,10 +115,10 @@ Body
 <details>
 <summary>
 
-#### DELETE: ```/api/products/:pid```. Eliminar un producto
+##### DELETE ```/api/products/:pid```. Eliminar un producto
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/products/2
 ```
@@ -106,10 +129,10 @@ http://localhost:8080/api/products/2
 <details>
 <summary>
 
-#### GET: ```/api/carts```. Obtener listado de carritos
+##### GET ```/api/carts```. Obtener listado de carritos
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/carts
 ```
@@ -118,10 +141,10 @@ http://localhost:8080/api/carts
 <details>
 <summary>
 
-#### GET: ```/api/carts/:cid```. Obtener listado de productos de un carrito
+##### GET ```/api/carts/:cid```. Obtener listado de productos de un carrito
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/carts/2
 ```
@@ -130,14 +153,14 @@ http://localhost:8080/api/carts/2
 <details>
 <summary>
 
-#### POST: ```/api/carts```. Agregar carrito
+##### POST ```/api/carts```. Agregar carrito
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/carts
 ```
-Body
+**Body**
 ```javascript
 [
 	{
@@ -155,10 +178,10 @@ Body
 <details>
 <summary>
 
-#### POST: ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
+##### POST ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
 </summary>
 
-Ejemplo
+**Ejemplo**
 ```
 http://localhost:8080/api/carts/2/product/1
 ```
