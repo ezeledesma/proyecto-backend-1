@@ -35,14 +35,14 @@ http://localhost:8080/api/products
 Body
 ```javascript
 {
-    "title": "Yerba",
-    "description": "Yerba palo",
-    "code": "ybp01",
-    "price": 100,
-    "status": false,
-    "stock": 5,
-    "category": "Yerba",
-    "thumbnails": []
+	"title": "Yerba",
+	"description": "Yerba palo",
+	"code": "ybp01",
+	"price": 100,
+	"status": false,
+	"stock": 5,
+	"category": "Yerba",
+	"thumbnails": []
 }
 ```
 #### PUT: ```/api/products/:pid```. Actualizar un producto
@@ -53,14 +53,14 @@ http://localhost:8080/api/products/1
 Body
 ```javascript
 {
-    "title": "Fideos",
-    "description": "Alimento",
-    "code": "fd01",
-    "price": 300,
-    "status": true,
-    "stock": 10,
-    "category": "Pastas",
-    "thumbnails": ["imagen-fideos-1.png","imagen-fideos-2.png"]
+	"title": "Fideos",
+	"description": "Alimento",
+	"code": "fd01",
+	"price": 300,
+	"status": true,
+	"stock": 10,
+	"category": "Pastas",
+	"thumbnails": ["imagen-fideos-1.png","imagen-fideos-2.png"]
 }
 ```
 #### DELETE: ```/api/products/:pid```. Eliminar un producto
@@ -82,11 +82,11 @@ Body
 [
 	{
 		"id": "2",
-        "quantity": 4
+		"quantity": 4
 	},
 	{
 		"id":"3",
-        "quantity": 2
+		"quantity": 2
 	}
 ]
 ```
