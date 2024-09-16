@@ -14,22 +14,25 @@
 
 ### Productos
 
-GET: Obtener listado de todos los productos. Parametro opcional: ?limit
+#### GET: ```/api/products```. Obtener listado de todos los productos . Parametro opcional: ```?limit```
+Ejemplo
 ```
-/api/products
-/api/products?limit=3
-```
-
-GET: Obtener producto por id
-```
-/api/products/3
+http://localhost:8080/api/products
+http://localhost:8080/api/products?limit=3
 ```
 
-POST: Cargar un producto
+#### GET: ```/api/products/:pid```. Obtener producto por id 
+Ejemplo
 ```
-/api/products
+http://localhost:8080/api/products/3
 ```
-body:
+
+#### POST: ```/api/products```. Cargar un producto
+Ejemplo
+```
+http://localhost:8080/api/products
+```
+Body
 ```javascript
 {
     "title": "Yerba",
@@ -42,12 +45,12 @@ body:
     "thumbnails": []
 }
 ```
-PUT: Actualizar un producto
-
+#### PUT: ```/api/products/:pid```. Actualizar un producto
+Ejemplo
 ```
-/api/products/1
+http://localhost:8080/api/products/1
 ```
-body:
+Body
 ```javascript
 {
     "title": "Fideos",
@@ -57,22 +60,24 @@ body:
     "status": true,
     "stock": 10,
     "category": "Pastas",
-    "thumbnails": ["putTest"]
+    "thumbnails": ["imagen-fideos-1.png","imagen-fideos-2.png"]
 }
 ```
-DELETE: Eliminar un producto
+#### DELETE: ```/api/products/:pid```. Eliminar un producto
+Ejemplo
 ```
-/api/products/2
+http://localhost:8080/api/products/2
 ```
 
 ### Carritos
 
-POST: Agregar carrito
+#### POST: ```/api/carts```. Agregar carrito
+Ejemplo
 
 ```
-/api/carts
+http://localhost:8080/api/carts
 ```
-body:
+Body
 ```javascript
 [
 	{
@@ -85,17 +90,17 @@ body:
 	}
 ]
 ```
-GET: Obtener listado de carritos
+#### GET: ```/api/carts```. Obtener listado de carritos
 ```
-/api/carts
+http://localhost:8080/api/carts
 ```
-GET: Obtener listado de productos de un carrito
+#### GET: ```/api/carts/:cid```. Obtener listado de productos de un carrito
 ```
-/api/carts/2
+http://localhost:8080/api/carts/2
 ```
-POST: Agregar producto a un carrito
+#### POST: ```/api/carts/:cid/product/:pid```. Agregar producto a un carrito
 ```
-/api/carts/2/product/1
+http://localhost:8080/api/carts/2/product/1
 ```
 
 > [!NOTE]
