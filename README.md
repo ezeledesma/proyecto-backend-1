@@ -1,4 +1,4 @@
-# Backend 1 - CoderHouse: [Primera Entrega](https://github.com/ezeledesma/proyecto-backend-1)
+# Backend 1 - CoderHouse: [Segunda Entrega](https://github.com/ezeledesma/proyecto-backend-1)
 
 ## Temas Aplicados del Curso
 * NodeJS
@@ -7,33 +7,12 @@
 * Servidores Web
 * Express
 * Router
+* Handlebars
+* Websockets
 
 ------
 
 ## Documentacion API
-
-<style>
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
-}
-
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-}
-
-details[open] {
-  padding: 0.5em;
-}
-
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
-}
-</style>
 
 ### Productos
 
@@ -188,4 +167,4 @@ http://localhost:8080/api/carts/2/product/1
 </details>
 
 > [!NOTE]
-> Sitio aun en desarrollo (primera entrega)
+> Sitio aun en desarrollo (segunda entrega)
