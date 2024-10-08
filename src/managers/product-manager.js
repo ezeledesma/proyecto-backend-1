@@ -2,6 +2,7 @@ import * as fs from "fs";
 
 export class ProductManager {
 	static ultimoId = 0;
+	static archivo;
 	constructor(archivo) {
 		if(archivo) {
 			let cargarArchivo = async () => {
@@ -12,13 +13,15 @@ export class ProductManager {
 				this.products.map(item => {
 					ProductManager.ultimoId = Math.max(ProductManager.ultimoId, parseInt(item.id));
 				})
+				// Actualizo nombre de archivo
+				ProductManager.archivo = archivo;
 			}
 			cargarArchivo();
 		}
 		else this.products = [];
 	}
 
-	addProduct({title, description, code, price, status=true, stock, category, thumbnails}) {
+	async addProduct({title, description, code, price, status=true, stock, category, thumbnails}) {
 		// Validamos los campos obligatorios
 		if(!title || !description || !code || !price || !stock || !category ){
 			return "Faltan campos obligatorios!";
@@ -44,6 +47,7 @@ export class ProductManager {
 
 		// Lo guardamos en el array:
 		this.products.push(nuevoProducto);
+		await fs.promises.writeFile(ProductManager.archivo, JSON.stringify(this.products, null, 2));
 		return 0;
 	}
 
@@ -56,7 +60,7 @@ export class ProductManager {
 		return productoBuscado;
 	}
 
-	updateProduct(id, nuevosDatos) {
+	async updateProduct(id, nuevosDatos) {
 		const productoBuscado = this.getProductById(id);
 		if(productoBuscado) {
 			productoBuscado.title = nuevosDatos.title;
@@ -69,11 +73,15 @@ export class ProductManager {
 			productoBuscado.thumbnails = nuevosDatos.thumbnails;
 		}
 		else return -1;
+
+		await fs.promises.writeFile(ProductManager.archivo, JSON.stringify(this.products, null, 2));
+
 		return 0;
 	}
 
-	deleteProduct(id) {
+	async deleteProduct(id) {
 		this.products = this.products.filter(item => item.id !== id);
+		await fs.promises.writeFile(ProductManager.archivo, JSON.stringify(this.products, null, 2));
 		return 0;
 	}
 }
