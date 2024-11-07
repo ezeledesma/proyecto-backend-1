@@ -1,29 +1,33 @@
 import { Router } from "express";
 const router = Router();
-import { CartManager } from "../managers/cart-manager.js";
-const manager = new CartManager("./src/data/cart.json");
+import CartManager from "../managers/cart-manager.js";
 
-router.get("/api/carts", (req, res) => {
-	res.json(manager.getCarts());
+router.get("/api/carts", async (req, res) => {
+	const carts = await CartManager.find();
+	res.json(carts);
 })
 
-router.post("/api/carts", (req, res) => {
+router.post("/api/carts", async (req, res) => {
 	const nuevoCarrito = req.body;
+		const nuevoCarrito2 = [{
+			products:nuevoCarrito
+		}]
 
 	try {
-		let aux = manager.addCart(nuevoCarrito);
-		if(!aux) res.status(201).send("Producto agregado!");
+		let aux = await CartManager.insertMany(nuevoCarrito2);
+
+		if(aux) res.status(201).send("Producto agregado!");
 		else res.status(409).send(aux);
 	} catch (error) {
 		res.status(500).send("Error del servidor");
 	}
 })
 
-router.get("/api/carts/:cid", (req, res) => {
+router.get("/api/carts/:cid", async (req, res) => {
 	let id = req.params.cid;
 
 	try {
-		const carritoBuscado = manager.getCartById(id);
+		const carritoBuscado = await CartManager.findById(id);
 		if(carritoBuscado) res.json(carritoBuscado);
 		else res.status(404).send("Carrito no encontrado");
 	} catch (error) {
