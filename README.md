@@ -1,4 +1,4 @@
-# Backend 1 - CoderHouse: [Segunda Entrega](https://github.com/ezeledesma/proyecto-backend-1)
+# Backend 1 - CoderHouse: [Entrega Final](https://github.com/ezeledesma/proyecto-backend-1)
 
 ## Temas Aplicados del Curso
 * NodeJS
@@ -9,6 +9,9 @@
 * Router
 * Handlebars
 * Websockets
+* MongoDB
+* Mongoose
+* Paginate
 
 ------
 
